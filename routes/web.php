@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/vision', 'VisionController@index')->name('vision');
+Route::post('/analyze', 'VisionController@analyze')->name('analyze');
+Route::get('/result', 'VisionController@result')->name('result');
